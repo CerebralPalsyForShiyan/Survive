@@ -1,2 +1,2 @@
 # Survive
-This is minecraft spigot plugins'storehouse, The Technical force is junior;
+这是一个我的世界spigot的插件，技术力很低下;作者也只是个初中生..
