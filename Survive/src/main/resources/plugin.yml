@@ -1,0 +1,16 @@
+name: Survive
+version: '${project.version}'
+main: me.shiyan.survive.Main
+author: Shiyan
+
+commands:
+  survive:
+    description: 插件指令
+  openAttributeGui:
+    description: 打开属性界面
+  reloadsur:
+    description: 重载
+permissions:
+  survive.commands.reload:
+    description: 重载
+    default: op

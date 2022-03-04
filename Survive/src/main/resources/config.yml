@@ -1,0 +1,60 @@
+#请看清楚需要填的类型
+#只能填整数[骨折的起始  起码得这个高度的摔落才能造成伤害]
+BoneBreakQuantity: 7
+#只能在""里面填入数字[ 此为概率，每格摔落的额外概率为 (实际摔的格数 - BoneBreakQuantity) * BoneBreakProQuantity
+BoneBreakProQuantity: "0.045"
+#输入true或者false [ true为开启骨折]
+BoneBreak: true
+#显示伤害，不推荐显示，原理是发送一个title,这个只是为了测试，看情况会改成别的方式
+ShowDamage: true
+
+#开不开流血，伤害是整型
+LoseBlood: true
+#流血的伤害
+LoseBloodDamage: 1
+#百分比几率，这里的5 = 5%
+LosePercentage: 5
+
+#输入true or false; [true为开启 创口 ->生物拥有创口后受到的伤害将增加,具体如woundDamage的提示]
+Wound: true
+#只能输入整数/小数,需要保留" "[   是敌人拥有创口时的基础倍率  最终伤害： WoundDamage * 玩家造成的伤害]
+WoundDamage: "1.2"
+#只可输入整数 [创口加深的最多次数，次数越多伤害越高 与上面那个值的总合的
+#最终伤害公式-> ( 加深创口次数 * WoundDamage) * 玩家造成的伤害
+加深创口最多次数: 5
+
+格挡所需包含的名称: '反击'
+#目前尚未弄好,不建议打开，因为莫名报错，并且还没有写冷却;即使可以反击
+是否开启格挡反击: false
+
+#属性,都是整型,Each..的需要用到""包裹着数字
+Attributes:
+  #属性最大可提升至多少
+  MaxAttributesLevel: 50
+  #每点力量能提升多少攻击
+  EachPowerProvideDamage: 0.35
+  #每点体质能提升多少生命值
+  EachPhysiqueProvideHealth: 0.25
+  #每点体质能提升多少护甲值
+  EachPhysiqueProvideArmor: 0.1
+#关于技能的
+Skills:
+  #基础技能方面的
+  BaseSkills:
+    #基础技能最大等级
+    MaxBaseSkills: 5
+    Thump:
+      #需要消耗多少的最大耐力值,0.1=10%
+      NeedStaminaPercentage: 0.1
+      #每级重击增加多少的额外伤害,0.05=5%,且这个额外伤害是根据消耗的耐力值而定
+      EachLevelExtraDamage: 0.05
+    #坚硬皮肤
+    ToughSkin:
+      #每级提供多少的额外减伤,减伤为(遭受的伤害 - 坚硬皮肤的等级 * 这个)
+      EachLevelReduceDamage: 0.5
+#点数
+Point:
+  #每级能提供多少属性点
+  EachLevelProvideAttributePoint: 2
+  #每级能提供多少技能点
+  EachLevelProvideSkillPoint: 1
